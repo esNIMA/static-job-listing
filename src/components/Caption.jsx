@@ -3,7 +3,10 @@ export default function Caption({ job }) {
     <div className="u--flex card--left">
       <div>
         <figure className="card--image">
-          <img src={`./static-job-listing/sass/${job.logo}`} alt="" />
+          <img
+            src={`https://github.com/esNIMA/static-job-listing/blob/main/sass/images/${job.logo}`}
+            alt="company logo"
+          />
         </figure>
       </div>
       <div className="card--caption">
