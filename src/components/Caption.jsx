@@ -1,10 +1,12 @@
-
 export default function Caption({ job }) {
   return (
     <div className="u--flex card--left">
       <div>
         <figure className="card--image">
-          <img src={`../static-job-listing/sass/${job.logo}`} alt="" />
+          <img
+            src={`../static-job-listing/tree/main/sass/${job.logo}`}
+            alt=""
+          />
         </figure>
       </div>
       <div className="card--caption">
