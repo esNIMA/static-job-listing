@@ -162,7 +162,7 @@ export default function Jobs() {
   useEffect(() => {
     const updatedJobs = job.map((item) => {
       if (item.logo.startsWith("./")) {
-        return { ...item, logo: item.logo.substring(2) };
+        return { ...item, logo: item.logo.substring(1) };
       }
       return item;
     });
@@ -192,7 +192,7 @@ export default function Jobs() {
       }}
     >
       <div>
-       <SearchBar/>
+        <SearchBar />
       </div>
       <div>
         {filteredData.map((job) => (

@@ -1,7 +1,7 @@
 import Caption from "./Caption";
 import Filter from "./Filter";
 
-export default function job({ job }) {
+export default function Job({ job }) {
   return (
     <div key={job.id} className="card u--center-margin">
       <div className="u--flex u--flex-end">
