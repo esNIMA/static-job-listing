@@ -175,8 +175,9 @@ export default function Jobs() {
   const filteredData = job.filter((job) => {
     return (
       (!filterLevel || job.level === filterLevel) &&
-      (!filterLang || filterLang.every((lang) => job.languages.includes(lang)))&&
-      (!filterLang || filterLang.every((tool) => job.tools.includes(tool)))
+      (!filterLang ||
+        filterLang.every((lang) => job.languages.includes(lang))) &&
+      (!filterTools || filterTools.every((tool) => job.tools.includes(tool)))
     );
   });
   console.log(filteredData);
