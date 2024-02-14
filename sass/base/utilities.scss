@@ -1,0 +1,22 @@
+.u {
+  &--center {
+    text-align: center;
+    &-margin {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &--margin-bottom {
+    &-large {
+      margin-bottom: 5rem;
+    }
+  }
+  &--flex {
+    display: flex;
+    // @media (max-width: 630px) {
+    // flex-direction: column;}
+    &-end {
+      justify-content: flex-end;
+    }
+  }
+}
