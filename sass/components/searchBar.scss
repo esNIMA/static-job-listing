@@ -1,0 +1,35 @@
+.search-bar {
+  z-index: 3;
+  width: 70%;
+  height: 7rem;
+  background-color: $color-secondary;
+  border-color: $color-secondary;
+  border-width: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  margin-top: -8rem;
+  padding-left: 2rem;
+  box-shadow: 3px 2px 20px 0px $Dark-Grayish-Cyan-shade;
+  @media (max-width: 880px) {
+    width: 95%;
+  }
+  @media (max-width: 580px) {
+    padding-left: 0.5rem;
+  }
+  &__button {
+    border-radius: 0.4rem;
+    box-shadow: 0 0 0 0 $color-secondary;
+    border-color: $Light-Grayish-Cyan;
+    background-color: $Light-Grayish-Cyan;
+    color: $color-primary;
+    font-weight: bold;
+    width: auto;
+    height: 3.5rem;
+    margin-top: 2rem;
+    margin-right: 2%;
+    &:hover {
+      background-color: $Very-Dark-Grayish-Cyan;
+      color: $color-secondary;
+    }
+  }
+}

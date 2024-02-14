@@ -51,7 +51,7 @@
     @media (max-width: 580px) {
       font-size: 1rem;
     }
-    @media (max-width: 450px){
+    @media (max-width: 450px) {
       margin-left: 4.5rem;
     }
   }
@@ -62,7 +62,6 @@
     padding-top: 2rem;
     padding-left: 3rem;
     color: $color-primary;
-
   }
   &--position {
     position: relative;
@@ -77,10 +76,10 @@
     @media (max-width: 580px) {
       font-size: 2rem;
     }
-    @media (max-width: 450px){
+    @media (max-width: 450px) {
       font-size: 1.5rem;
     }
-    @media (max-width: 450px){
+    @media (max-width: 450px) {
       margin-top: 1.3rem;
     }
   }
@@ -92,7 +91,7 @@
     font-size: 1.8rem;
     margin-top: 1.5rem;
     padding-left: 1rem;
-    
+
     &__items {
       margin-left: 2rem;
       @media (max-width: 580px) {
@@ -105,10 +104,9 @@
         font-size: 1.5rem;
         margin-right: -1.5rem;
       }
-      @media (max-width: 450px){
+      @media (max-width: 450px) {
         font-size: 1.2rem;
       }
-      
     }
   }
   &--new {
@@ -133,7 +131,7 @@
     @media (max-width: 580px) {
       margin-left: 9rem;
     }
-    @media (max-width: 450px){
+    @media (max-width: 450px) {
       transform: scale(0.7);
       margin-left: 7rem;
     }
@@ -151,9 +149,9 @@
     border-radius: 44%;
     padding-top: 0.9rem;
     margin-top: 1.5rem;
-    @media (max-width: 450px){
+    @media (max-width: 450px) {
       transform: scale(0.7);
-      right:30%
+      right: 30%;
     }
   }
   &--right {
@@ -193,8 +191,10 @@ button.card--filter__button {
   border: none;
   font-size: 1.6rem;
   font-weight: bold;
+  z-index: 1000;
   &:hover {
-    color: black;
+    color: $color-secondary;
+    background-color: $color-primary;
   }
   @media (max-width: 1300px) {
     font-size: 1.3rem;

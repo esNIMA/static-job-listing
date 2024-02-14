@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header className="header u--margin-bottom-large">
-      <div className="u--center ">
+      <div className="u--center u--z-index">
         <svg
           width="100vw"
           height="156"

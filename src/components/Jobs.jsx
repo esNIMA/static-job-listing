@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Job from "./Job";
+import SearchBar from "./SearchBar";
 var data = [
   {
     id: 10,
@@ -152,7 +153,7 @@ var data = [
     tools: ["Django"],
   },
 ];
-
+export const filterContext = createContext();
 export default function Jobs() {
   const [job, setJob] = useState(data);
   const [filterLevel, setFilterLevel] = useState("");
@@ -169,9 +170,7 @@ export default function Jobs() {
     // Update the state with modified data
     setJob(updatedJobs);
   }, []);
-  // const filteredData = job.filter(
-  //   (job) => job.level === `${filterLevel ? job.filterLevel : true}`
-  // );
+
   const filteredData = job.filter((job) => {
     return (
       (!filterLevel || job.level === filterLevel) &&
@@ -180,12 +179,26 @@ export default function Jobs() {
       (!filterTools || filterTools.every((tool) => job.tools.includes(tool)))
     );
   });
-  console.log(filteredData);
+  // console.log(filteredData);
   return (
-    <div>
-      {filteredData.map((job) => (
-        <Job key={job.id} job={job} />
-      ))}
-    </div>
+    <filterContext.Provider
+      value={{
+        filterLevel: filterLevel,
+        filterLang: filterLang,
+        filterTools: filterTools,
+        setFilterLevel: setFilterLevel,
+        setFilterLang: setFilterLang,
+        setFilterTools: setFilterTools,
+      }}
+    >
+      <div>
+       <SearchBar/>
+      </div>
+      <div>
+        {filteredData.map((job) => (
+          <Job key={job.id} job={job} />
+        ))}
+      </div>
+    </filterContext.Provider>
   );
 }
