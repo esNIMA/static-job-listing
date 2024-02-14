@@ -4,7 +4,7 @@ export default function Caption({ job }) {
       <div>
         <figure className="card--image">
           <img
-            src={`../static-job-listing/tree/main/sass/${job.logo}.svg`}
+            src={`/static-job-listing/tree/main/sass/${job.logo}.svg`}
             alt=""
           />
         </figure>
