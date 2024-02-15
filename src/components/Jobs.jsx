@@ -159,18 +159,18 @@ export default function Jobs() {
   const [filterLevel, setFilterLevel] = useState("");
   const [filterLang, setFilterLang] = useState([]);
   const [filterTools, setFilterTools] = useState([]);
-  useEffect(() => {
-    const updatedJobs = job.map((item) => {
-      if (item.logo.startsWith("./")) {
-        return { ...item, logo: item.logo.substring(1) };
-      }
-      return item;
-    });
+  // useEffect(() => {
+  //   const updatedJobs = job.map((item) => {
+  //     if (item.logo.startsWith("./")) {
+  //       return { ...item, logo: item.logo.substring(1) };
+  //     }
+  //     return item;
+  //   });
 
-    // Update the state with modified data
-    setJob(updatedJobs);
-  }, [job]);
-  console.log(job);
+  //   // Update the state with modified data
+  //   setJob(updatedJobs);
+  // }, [job]);
+  // console.log(job);
   const filteredData = job.filter((job) => {
     return (
       (!filterLevel || job.level === filterLevel) &&
