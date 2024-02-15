@@ -3,7 +3,7 @@ export default function Caption({ job }) {
     <div className="u--flex card--left">
       <div>
         <figure className="card--image">
-          <img src={`${job.logo}`} alt="company logo" />
+          <img src={job.logo} alt="company logo" />
         </figure>
       </div>
       <div className="card--caption">
