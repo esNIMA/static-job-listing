@@ -170,7 +170,7 @@ export default function Jobs() {
     // Update the state with modified data
     setJob(updatedJobs);
   }, []);
-
+  console.log(job);
   const filteredData = job.filter((job) => {
     return (
       (!filterLevel || job.level === filterLevel) &&
