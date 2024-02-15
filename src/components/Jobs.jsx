@@ -169,7 +169,7 @@ export default function Jobs() {
 
     // Update the state with modified data
     setJob(updatedJobs);
-  }, []);
+  }, [job]);
   console.log(job);
   const filteredData = job.filter((job) => {
     return (
